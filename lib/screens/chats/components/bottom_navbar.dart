@@ -1,5 +1,8 @@
 import 'package:chat_sap/app_routes.dart';
+import 'package:chat_sap/screens/chats/chats_screen.dart';
+import 'package:chat_sap/screens/chats/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   final int index;
@@ -10,13 +13,33 @@ class CustomBottomNavBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       currentIndex: index,
       onTap: (indexCible) {
-        switch (indexCible) {
-          case 0:
-            Navigator.pushReplacementNamed(context, kChatsRoute);
-            break;
-          case 1:
-            Navigator.pushReplacementNamed(context, kProfileRoute);
-            break;
+        if (indexCible != index) {
+          switch (indexCible) {
+            case 0:
+              // Navigator.pushReplacementNamed(context, kChatsRoute);
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: (index == 0)
+                      ? PageTransitionType.rightToLeft
+                      : PageTransitionType.leftToRight,
+                  child: ChatsScreen(),
+                ),
+              );
+              break;
+            case 1:
+              // Navigator.pushReplacementNamed(context, kProfileRoute);
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: (index == 0)
+                      ? PageTransitionType.rightToLeft
+                      : PageTransitionType.leftToRight,
+                  child: ProfileScreen(),
+                ),
+              );
+              break;
+          }
         }
       },
       items: [

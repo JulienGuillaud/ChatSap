@@ -5,8 +5,8 @@ import 'screens/chats/chats_screen.dart';
 import 'screens/chats/profile/profile_screen.dart';
 import 'screens/welcome/welcome_screen.dart';
 
-const kMainRoute = '/';
 // const kLoginRoute = '/login';
+const kMainRoute = '/';
 const kChatsRoute = '/chats';
 const kProfileRoute = '/profile';
 const kSignInSignUpRoute = '/signInSignUp';
