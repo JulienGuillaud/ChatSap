@@ -1,6 +1,6 @@
+import 'package:chat_sap/app_routes.dart';
 import 'package:chat_sap/components/primary_button.dart';
 import 'package:chat_sap/constants.dart';
-import 'package:chat_sap/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
@@ -19,14 +19,9 @@ class SigninOrSignupScreen extends StatelessWidget {
               ),
               Spacer(),
               PrimaryButton(
-                text: "Connection",
-                press: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ChatsScreen(),
-                  ),
-                ),
-              ),
+                  text: "Connection",
+                  press: () =>
+                      Navigator.pushReplacementNamed(context, kChatsRoute)),
               SizedBox(height: kDefaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,

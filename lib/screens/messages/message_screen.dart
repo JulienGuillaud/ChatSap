@@ -33,25 +33,10 @@ class MessagesScreen extends StatelessWidget {
                 contact.firstName + " " + contact.lastName,
                 style: TextStyle(fontSize: 16),
               ),
-              Text(
-                "Active 3m ago",
-                style: TextStyle(fontSize: 12),
-              )
             ],
           )
         ],
       ),
-      actions: [
-        IconButton(
-          icon: Icon(Icons.local_phone),
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: Icon(Icons.videocam),
-          onPressed: () {},
-        ),
-        SizedBox(width: kDefaultPadding / 2),
-      ],
     );
   }
 }

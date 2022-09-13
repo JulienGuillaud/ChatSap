@@ -1,4 +1,4 @@
-import 'package:chat_sap/screens/welcome/welcome_screen.dart';
+import 'package:chat_sap/app_routes.dart';
 import 'package:chat_sap/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      home: WelcomeScreen(),
+      // home: WelcomeScreen(),
+      initialRoute: '/',
+      routes: kRoutes,
     );
   }
 }
