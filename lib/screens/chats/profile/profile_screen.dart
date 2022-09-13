@@ -1,15 +1,14 @@
 import 'package:chat_sap/constants.dart';
 import 'package:chat_sap/screens/chats/components/bottom_navbar.dart';
+import 'package:chat_sap/screens/chats/profile/components/body.dart';
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
-
-class ChatsScreen extends StatefulWidget {
+class ProfileScreen extends StatefulWidget {
   @override
-  _ChatsScreenState createState() => _ChatsScreenState();
+  _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class _ChatsScreenState extends State<ChatsScreen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +22,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
           color: Colors.white,
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(0),
+      bottomNavigationBar: CustomBottomNavBar(1),
     );
   }
 

@@ -1,5 +1,5 @@
+import 'package:chat_sap/app_routes.dart';
 import 'package:chat_sap/constants.dart';
-import 'package:chat_sap/screens/signinOrSignUp/signin_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -35,12 +35,8 @@ class WelcomeScreen extends StatelessWidget {
             Spacer(flex: 3),
             FittedBox(
               child: TextButton(
-                  onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SigninOrSignupScreen(),
-                        ),
-                      ),
+                  onPressed: () => Navigator.pushReplacementNamed(
+                      context, kSignInSignUpRoute),
                   child: Row(
                     children: [
                       Text(

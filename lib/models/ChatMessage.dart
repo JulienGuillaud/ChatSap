@@ -47,20 +47,6 @@ List demeChatMessages = [
   ),
   ChatMessage(
     contact: Contact.findContact(1),
-    text: "",
-    messageType: ChatMessageType.audio,
-    messageStatus: MessageStatus.viewed,
-    isSender: false,
-  ),
-  ChatMessage(
-    contact: Contact.findContact(1),
-    text: "",
-    messageType: ChatMessageType.video,
-    messageStatus: MessageStatus.viewed,
-    isSender: true,
-  ),
-  ChatMessage(
-    contact: Contact.findContact(1),
     text: "Ya r",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_sent,

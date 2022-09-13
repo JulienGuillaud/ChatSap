@@ -2,9 +2,7 @@ import 'package:chat_sap/models/ChatMessage.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import 'audio_message.dart';
 import 'text_message.dart';
-import 'video_message.dart';
 
 class Message extends StatelessWidget {
   const Message({
@@ -16,19 +14,6 @@ class Message extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget messageContaint(ChatMessage message) {
-      switch (message.messageType) {
-        case ChatMessageType.text:
-          return TextMessage(message: message);
-        case ChatMessageType.audio:
-          return AudioMessage(message: message);
-        case ChatMessageType.video:
-          return VideoMessage();
-        default:
-          return SizedBox();
-      }
-    }
-
     return Container(
       // width: MediaQuery.of(context).size.width,
       // height: MediaQuery.of(context).size.height * 0.5,
@@ -51,7 +36,7 @@ class Message extends StatelessWidget {
               child: ConstrainedBox(
                 constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width * 0.75),
-                child: Container(child: messageContaint(message)),
+                child: Container(child: TextMessage(message: message)),
               ),
             ),
             if (message.isSender)
