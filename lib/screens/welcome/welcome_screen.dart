@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
             Image.asset("assets/images/welcome_image.png"),
             Spacer(flex: 3),
             Text(
-              "Welcome to our freedom \nmessaging app",
+              "Bienvenu dans \nChatSap",
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
@@ -22,7 +22,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              "Freedom talk any person of your \nmother language.",
+              "(pas dutout une copie \nd'une app déjà existante)",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Theme.of(context)
