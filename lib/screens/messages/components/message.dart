@@ -31,7 +31,7 @@ class Message extends StatelessWidget {
 
     return Container(
       // width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.5,
+      // height: MediaQuery.of(context).size.height * 0.5,
       child: Padding(
         padding: const EdgeInsets.only(top: kDefaultPadding),
         child: Row(

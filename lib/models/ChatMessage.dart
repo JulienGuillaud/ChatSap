@@ -1,4 +1,5 @@
 enum ChatMessageType { text, audio, image, video }
+
 enum MessageStatus { not_sent, not_view, viewed }
 
 class ChatMessage {
@@ -17,13 +18,13 @@ class ChatMessage {
 
 List demeChatMessages = [
   ChatMessage(
-    text: "Hi Sajol,",
+    text: "Salut ça va,",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: false,
   ),
   ChatMessage(
-    text: "Hello, How are you?",
+    text: "Oue et toi ?",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: true,
@@ -41,19 +42,19 @@ List demeChatMessages = [
     isSender: true,
   ),
   ChatMessage(
-    text: "Error happend",
+    text: "Ya r",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_sent,
     isSender: true,
   ),
   ChatMessage(
-    text: "This looks great man!!",
+    text: "Ah mince",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: false,
   ),
   ChatMessage(
-    text: "Glad you like it",
+    text: "bla bla",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_view,
     isSender: true,
