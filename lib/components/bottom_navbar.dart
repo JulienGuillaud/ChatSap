@@ -16,7 +16,7 @@ class CustomBottomNavBar extends StatelessWidget {
           switch (indexCible) {
             case 0:
               // Navigator.pushReplacementNamed(context, kChatsRoute);
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 PageTransition(
                   type: (index == 0)
@@ -28,7 +28,7 @@ class CustomBottomNavBar extends StatelessWidget {
               break;
             case 1:
               // Navigator.pushReplacementNamed(context, kProfileRoute);
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 PageTransition(
                   type: (index == 0)
