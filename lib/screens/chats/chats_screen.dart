@@ -9,7 +9,7 @@ class ChatsScreen extends StatefulWidget {
 }
 
 class _ChatsScreenState extends State<ChatsScreen> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,14 +38,14 @@ class _ChatsScreenState extends State<ChatsScreen> {
       },
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chats"),
-        BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
-        BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
+        // BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
+        // BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
         BottomNavigationBarItem(
           icon: CircleAvatar(
             radius: 14,
             backgroundImage: AssetImage("assets/images/user_2.png"),
           ),
-          label: "Profile",
+          label: "Profil",
         ),
       ],
     );

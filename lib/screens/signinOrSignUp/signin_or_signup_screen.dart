@@ -14,14 +14,12 @@ class SigninOrSignupScreen extends StatelessWidget {
             children: [
               Spacer(flex: 2),
               Image.asset(
-                MediaQuery.of(context).platformBrightness == Brightness.light
-                    ? "assets/images/Logo_light.png"
-                    : "assets/images/Logo_dark.png",
+                "assets/images/Logo.png",
                 height: 146,
               ),
               Spacer(),
               PrimaryButton(
-                text: "Sign In",
+                text: "Connection",
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -32,7 +30,7 @@ class SigninOrSignupScreen extends StatelessWidget {
               SizedBox(height: kDefaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
-                text: "Sign Up",
+                text: "Insription",
                 press: () {},
               ),
               Spacer(flex: 2),

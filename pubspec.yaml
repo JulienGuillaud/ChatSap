@@ -30,6 +30,7 @@ dependencies:
 
   # allows us to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.0.0
+  flutter_launcher_icons: ^0.10.0
 
 dev_dependencies:
   flutter_test:
@@ -76,3 +77,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/Logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/icons/Logo.png"
+    background_color: "#FFFFFF"
+    theme_color: "#2ABF4B"
