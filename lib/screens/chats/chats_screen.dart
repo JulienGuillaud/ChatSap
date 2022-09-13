@@ -1,5 +1,5 @@
+import 'package:chat_sap/components/bottom_navbar.dart';
 import 'package:chat_sap/constants.dart';
-import 'package:chat_sap/screens/chats/components/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';

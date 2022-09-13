@@ -1,4 +1,3 @@
-import 'package:chat_sap/app_routes.dart';
 import 'package:chat_sap/screens/chats/chats_screen.dart';
 import 'package:chat_sap/screens/chats/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
