@@ -1,11 +1,14 @@
+import 'Contact.dart';
+
 class Chat {
-  final String name, lastMessage, image, time;
+  final String name, lastMessage, time;
+  Contact contact;
   final bool isActive;
 
   Chat({
+    required this.contact,
     this.name = '',
     this.lastMessage = '',
-    this.image = '',
     this.time = '',
     this.isActive = false,
   });
@@ -13,16 +16,14 @@ class Chat {
 
 List chatsData = [
   Chat(
-    name: "Yanis GO",
+    contact: Contact.findContact(1),
     lastMessage: "Mets toi au go",
-    image: "assets/images/user.png",
     time: "3m ago",
     isActive: false,
   ),
   Chat(
-    name: "Julien G",
+    contact: Contact.findContact(2),
     lastMessage: "Gros tfq",
-    image: "assets/images/user_2.png",
     time: "8m ago",
     isActive: true,
   ),

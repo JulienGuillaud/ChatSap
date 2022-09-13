@@ -17,7 +17,8 @@ class Body extends StatelessWidget {
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MessagesScreen(),
+                  builder: (context) =>
+                      MessagesScreen(chatsData[index].contact),
                 ),
               ),
             ),
