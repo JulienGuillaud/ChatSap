@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "488746407188",
+    "project_id": "chatsap-f65b5",
+    "storage_bucket": "chatsap-f65b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488746407188:android:da79944edaec7c0bd65e01",
+        "android_client_info": {
+          "package_name": "com.example.chat_sap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488746407188-9ml60enn2sc92embk4ft6c17e1bu41t9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfceHAaKR7Cfb5vZDkPdWDYYc2hyGqj14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488746407188-9ml60enn2sc92embk4ft6c17e1bu41t9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
