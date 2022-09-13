@@ -1,5 +1,5 @@
 import 'package:chat_sap/constants.dart';
-import 'package:chat_sap/screens/chats/components/bottom_navbar.dart';
+import 'package:chat_sap/components/bottom_navbar.dart';
 import 'package:chat_sap/screens/chats/profile/components/body.dart';
 import 'package:flutter/material.dart';
 
@@ -30,12 +30,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return AppBar(
       automaticallyImplyLeading: false,
       title: Text("Chats"),
-      actions: [
-        IconButton(
-          icon: Icon(Icons.search),
-          onPressed: () {},
-        ),
-      ],
     );
   }
 }
