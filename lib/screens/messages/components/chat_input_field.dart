@@ -38,15 +38,15 @@ class ChatInputField extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Icon(
-                      Icons.sentiment_satisfied_alt_outlined,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
-                    ),
-                    SizedBox(width: kDefaultPadding / 4),
+                    // Icon(
+                    //   Icons.sentiment_satisfied_alt_outlined,
+                    //   color: Theme.of(context)
+                    //       .textTheme
+                    //       .bodyText1!
+                    //       .color!
+                    //       .withOpacity(0.64),
+                    // ),
+                    // SizedBox(width: kDefaultPadding / 4),
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
