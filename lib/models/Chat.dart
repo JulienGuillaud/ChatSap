@@ -14,17 +14,17 @@ class Chat {
   });
 }
 
-List chatsData = [
-  Chat(
-    contact: Contact.findContact(1),
-    lastMessage: "Mets toi au go",
-    time: "3m ago",
-    isActive: false,
-  ),
-  Chat(
-    contact: Contact.findContact(2),
-    lastMessage: "Gros tfq",
-    time: "8m ago",
-    isActive: true,
-  ),
-];
+// List chatsData = [
+//   Chat(
+//     contact: Contact.findContact(1),
+//     lastMessage: "Mets toi au go",
+//     time: "3m ago",
+//     isActive: false,
+//   ),
+//   Chat(
+//     contact: Contact.findContact(2),
+//     lastMessage: "Gros tfq",
+//     time: "8m ago",
+//     isActive: true,
+//   ),
+// ];

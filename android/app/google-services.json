@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "488746407188",
+    "firebase_url": "https://chatsap-f65b5-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "chatsap-f65b5",
     "storage_bucket": "chatsap-f65b5.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "488746407188-c9m1dhqvggsap6d0ogmgk5b2p1d7t08l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chat_sap",
+            "certificate_hash": "c55706ced1892454879d07b6b50051f70e1093dd"
+          }
+        },
         {
           "client_id": "488746407188-9ml60enn2sc92embk4ft6c17e1bu41t9.apps.googleusercontent.com",
           "client_type": 3
@@ -29,6 +38,13 @@
             {
               "client_id": "488746407188-9ml60enn2sc92embk4ft6c17e1bu41t9.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "488746407188-057al6n4l1tu0g42binfffo5n0ok6rqi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chat"
+              }
             }
           ]
         }
