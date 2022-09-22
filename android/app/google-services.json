@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "488746407188",
+    "firebase_url": "https://chatsap-f65b5-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "chatsap-f65b5",
     "storage_bucket": "chatsap-f65b5.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "488746407188-9ml60enn2sc92embk4ft6c17e1bu41t9.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "488746407188-057al6n4l1tu0g42binfffo5n0ok6rqi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chat"
+              }
             }
           ]
         }
