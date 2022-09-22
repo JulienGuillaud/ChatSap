@@ -1,7 +1,7 @@
-import 'package:chat_sap/app_routes.dart';
+import 'package:chat_sap/constants/firebase_options.dart';
 import 'package:chat_sap/providers/providers.dart';
-import 'package:chat_sap/screens/welcome/welcome_screen.dart';
-import 'package:chat_sap/theme.dart';
+import 'package:chat_sap/screens/welcome_screen.dart';
+import 'package:chat_sap/constants/theme.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -11,19 +11,16 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// void main() {
-//   // init Firebase
-//   Firebase.initializeApp(
-//     options: DefaultFirebaseOptions.currentPlatform,
-//   );
-//   // run app
-//   runApp(MyApp());
-// }
-
 void main() async {
+  debugPrint('------------- MAIN 1 :');
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  debugPrint('------------- MAIN 2 :');
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  debugPrint('------------- MAIN 3 :');
   SharedPreferences prefs = await SharedPreferences.getInstance();
+  debugPrint('------------- MAIN 4 :');
   runApp(MyApp(prefs: prefs));
 }
 
@@ -38,6 +35,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('-------------MyApp build');
+
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<AuthProvider>(
@@ -72,9 +71,7 @@ class MyApp extends StatelessWidget {
           title: "ChatSap",
           theme: lightThemeData(context),
           home: SplashPage(),
-          debugShowCheckedModeBanner: false,
-          initialRoute: '/',
-          routes: kRoutes),
+          debugShowCheckedModeBanner: false),
     );
   }
 }

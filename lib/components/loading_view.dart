@@ -1,4 +1,4 @@
-import 'package:chat_sap/constants.dart';
+import 'package:chat_sap/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoadingView extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:chat_sap/components/loading_view.dart';
-import 'package:chat_sap/constants.dart';
+import 'package:chat_sap/constants/constants.dart';
 import 'package:chat_sap/constants/firestore_constants.dart';
 import 'package:chat_sap/models/Contact.dart';
 import 'package:chat_sap/providers/setting_provider.dart';
@@ -173,7 +173,7 @@ class SettingsPageStateState extends State<SettingsPageState> {
                   // Username
                   Container(
                     child: Text(
-                      'Nickname',
+                      'Nom',
                       style: TextStyle(
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold,

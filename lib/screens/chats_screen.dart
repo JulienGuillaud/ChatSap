@@ -1,10 +1,10 @@
 import 'package:chat_sap/components/loading_view.dart';
-import 'package:chat_sap/constants.dart';
+import 'package:chat_sap/constants/constants.dart';
 import 'package:chat_sap/constants/firestore_constants.dart';
 import 'package:chat_sap/models/ChatMessage.dart';
 import 'package:chat_sap/providers/auth_provider.dart';
 import 'package:chat_sap/providers/chat_provider.dart';
-import 'package:chat_sap/screens/signinOrSignUp/signin_or_signup_screen.dart';
+import 'package:chat_sap/screens/signin_or_signup_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -113,7 +113,7 @@ class ChatPageState extends State<ChatPage> {
       }
     } else {
       Fluttertoast.showToast(
-          msg: 'Nothing to send', backgroundColor: kSecondaryColor);
+          msg: 'Nothing to send', backgroundColor: kPrimaryColor);
     }
   }
 
@@ -127,13 +127,12 @@ class ChatPageState extends State<ChatPage> {
             Container(
               child: Text(
                 messageChat.text,
-                style: TextStyle(color: kPrimaryColor),
+                style: TextStyle(color: Colors.white),
               ),
               padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
               width: 200,
               decoration: BoxDecoration(
-                  color: kSecondaryColor,
-                  borderRadius: BorderRadius.circular(8)),
+                  color: kPrimaryColor, borderRadius: BorderRadius.circular(8)),
               margin: EdgeInsets.only(
                   bottom: isLastMessageRight(index) ? 20 : 10, right: 10),
             )
@@ -169,7 +168,7 @@ class ChatPageState extends State<ChatPage> {
                               return Icon(
                                 Icons.account_circle,
                                 size: 35,
-                                color: kSecondaryColor,
+                                color: kPrimaryColor,
                               );
                             },
                             width: 35,
@@ -190,7 +189,7 @@ class ChatPageState extends State<ChatPage> {
                     padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
                     width: 200,
                     decoration: BoxDecoration(
-                        color: kPrimaryColor,
+                        color: kSecondaryColor,
                         borderRadius: BorderRadius.circular(8)),
                     margin: EdgeInsets.only(left: 10),
                   )
@@ -265,14 +264,13 @@ class ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     this.widget.arguments.peerNickname,
-      //     style: TextStyle(color: kPrimaryColor),
-      //   ),
-      //   centerTitle: true,
-      // ),
-      appBar: buildAppBar(),
+      appBar: AppBar(
+        title: Text(
+          this.widget.arguments.peerNickname,
+          style: TextStyle(color: kPrimaryColor),
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: WillPopScope(
           child: Stack(
@@ -306,16 +304,8 @@ class ChatPageState extends State<ChatPage> {
     return Container(
       child: Row(
         children: <Widget>[
-          Material(
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 1),
-              child: IconButton(
-                icon: Icon(Icons.face),
-                onPressed: getSticker,
-                color: kPrimaryColor,
-              ),
-            ),
-            color: Colors.white,
+          SizedBox(
+            width: 17,
           ),
 
           // Edit text
@@ -328,8 +318,8 @@ class ChatPageState extends State<ChatPage> {
                 style: TextStyle(color: kPrimaryColor, fontSize: 15),
                 controller: textEditingController,
                 decoration: InputDecoration.collapsed(
-                  hintText: 'Type your message...',
-                  hintStyle: TextStyle(color: kSecondaryColor),
+                  hintText: 'Ecrivez un message..',
+                  hintStyle: TextStyle(color: kPrimaryColor),
                 ),
                 focusNode: focusNode,
                 autofocus: true,
@@ -378,7 +368,7 @@ class ChatPageState extends State<ChatPage> {
                       controller: listScrollController,
                     );
                   } else {
-                    return Center(child: Text("No message here yet..."));
+                    return Center(child: Text("Pas de message..."));
                   }
                 } else {
                   return Center(
@@ -408,40 +398,3 @@ class ChatPageArguments {
       required this.peerAvatar,
       required this.peerNickname});
 }
-
-// class ChatsScreen extends StatefulWidget {
-//   @override
-//   _ChatsScreenState createState() => _ChatsScreenState();
-// }
-
-// class _ChatsScreenState extends State<ChatsScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: buildAppBar(),
-//       body: Body(),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () {},
-//         backgroundColor: kPrimaryColor,
-//         child: Icon(
-//           Icons.person_add_alt_1,
-//           color: Colors.white,
-//         ),
-//       ),
-//       bottomNavigationBar: CustomBottomNavBar(0),
-//     );
-//   }
-
-AppBar buildAppBar() {
-  return AppBar(
-    automaticallyImplyLeading: false,
-    title: Text("Chats"),
-    actions: [
-      IconButton(
-        icon: Icon(Icons.search),
-        onPressed: () {},
-      ),
-    ],
-  );
-}
-// }

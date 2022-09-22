@@ -1,5 +1,5 @@
 import 'package:chat_sap/components/loading_view.dart';
-import 'package:chat_sap/constants.dart';
+import 'package:chat_sap/constants/constants.dart';
 import 'package:chat_sap/providers/providers.dart';
 import 'package:chat_sap/providers/auth_provider.dart';
 import 'package:chat_sap/screens/messages/home_page.dart';
@@ -17,6 +17,8 @@ class LoginPage extends StatefulWidget {
 class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    debugPrint('------------- LOGIN :');
+
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
     switch (authProvider.status) {
       case Status.authenticateError:

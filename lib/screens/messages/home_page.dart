@@ -1,14 +1,14 @@
 import 'dart:io';
 
 import 'package:chat_sap/components/loading_view.dart';
-import 'package:chat_sap/constants.dart';
+import 'package:chat_sap/constants/constants.dart';
 import 'package:chat_sap/constants/firestore_constants.dart';
 import 'package:chat_sap/models/Contact.dart';
 import 'package:chat_sap/models/popup_choices.dart';
 import 'package:chat_sap/providers/providers.dart';
-import 'package:chat_sap/screens/chats/chats_screen.dart';
+import 'package:chat_sap/screens/chats_screen.dart';
 import 'package:chat_sap/screens/settings_page.dart';
-import 'package:chat_sap/screens/signinOrSignUp/signin_or_signup_screen.dart';
+import 'package:chat_sap/screens/signin_or_signup_screen.dart';
 import 'package:chat_sap/utils/debouncer.dart';
 import 'package:chat_sap/utils/utilities.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -232,7 +232,7 @@ class HomePageState extends State<HomePage> {
                             );
                           } else {
                             return Center(
-                              child: Text("No users"),
+                              child: Text("Pas d'utilisateurs"),
                             );
                           }
                         } else {
@@ -288,7 +288,7 @@ class HomePageState extends State<HomePage> {
                 });
               },
               decoration: InputDecoration.collapsed(
-                hintText: 'Search nickname (you have to type exactly string)',
+                hintText: 'Rechercher un utilisateur (nom exact)',
                 hintStyle: TextStyle(fontSize: 13, color: kSecondaryColor),
               ),
               style: TextStyle(fontSize: 13),
@@ -314,7 +314,7 @@ class HomePageState extends State<HomePage> {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: kSecondaryColor,
+        color: Color.fromARGB(255, 234, 234, 234),
       ),
       padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
       margin: EdgeInsets.fromLTRB(16, 8, 16, 8),
@@ -405,18 +405,20 @@ class HomePageState extends State<HomePage> {
                       children: <Widget>[
                         Container(
                           child: Text(
-                            'Nickname: ${contact.username}',
+                            contact.username,
                             maxLines: 1,
-                            style: TextStyle(color: kPrimaryColor),
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 47, 47, 47)),
                           ),
                           alignment: Alignment.centerLeft,
                           margin: EdgeInsets.fromLTRB(10, 0, 0, 5),
                         ),
                         Container(
                           child: Text(
-                            'About me: ${contact.aboutMe}',
+                            'A propos de moi: ${contact.aboutMe}',
                             maxLines: 1,
-                            style: TextStyle(color: kPrimaryColor),
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 115, 115, 115)),
                           ),
                           alignment: Alignment.centerLeft,
                           margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -446,8 +448,8 @@ class HomePageState extends State<HomePage> {
               );
             },
             style: ButtonStyle(
-              backgroundColor:
-                  MaterialStateProperty.all<Color>(kSecondaryColor),
+              backgroundColor: MaterialStateProperty.all<Color>(
+                  Color.fromARGB(255, 234, 234, 234)),
               shape: MaterialStateProperty.all<OutlinedBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
