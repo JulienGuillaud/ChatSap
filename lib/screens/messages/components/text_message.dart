@@ -23,13 +23,13 @@ class TextMessage extends StatelessWidget {
         vertical: kDefaultPadding / 2,
       ),
       decoration: BoxDecoration(
-        color: kPrimaryColor.withOpacity(message!.isSender ? 1 : 0.1),
+        color: kPrimaryColor.withOpacity(message!.from == "1" ? 1 : 0.1),
         borderRadius: BorderRadius.circular(30),
       ),
       child: Text(
         message!.text,
         style: TextStyle(
-          color: message!.isSender
+          color: message!.from == "1"
               ? Colors.white
               : Theme.of(context).textTheme.bodyText1!.color,
         ),

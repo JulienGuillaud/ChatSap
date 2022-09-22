@@ -1,5 +1,5 @@
-import 'package:chat_sap/screens/chats/chats_screen.dart';
 import 'package:chat_sap/screens/chats/profile/profile_screen.dart';
+import 'package:chat_sap/screens/messages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -22,7 +22,7 @@ class CustomBottomNavBar extends StatelessWidget {
                   type: (index == 0)
                       ? PageTransitionType.rightToLeft
                       : PageTransitionType.leftToRight,
-                  child: ChatsScreen(),
+                  child: HomePage(),
                 ),
               );
               break;

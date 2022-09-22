@@ -20,12 +20,14 @@ class Message extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: kDefaultPadding),
         child: Row(
-          mainAxisAlignment: message.isSender
+          mainAxisAlignment: message.from ==
+                  "1" // Todo mettre le vrai id de la personne connecté
               ? MainAxisAlignment.end
               : MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           children: [
-            if (!message.isSender) ...[
+            if (message.from != "1") ...[
+              // Todo mettre le vrai id de la personne connecté
               CircleAvatar(
                 radius: 12,
                 backgroundImage: AssetImage("assets/images/user_2.png"),
@@ -39,7 +41,8 @@ class Message extends StatelessWidget {
                 child: Container(child: TextMessage(message: message)),
               ),
             ),
-            if (message.isSender)
+            if (message.from ==
+                "1") // Todo mettre le vrai id de la personne connecté
               MessageStatusDot(status: message.messageStatus)
           ],
         ),
