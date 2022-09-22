@@ -129,8 +129,8 @@ class ChatPageState extends State<ChatPage> {
                 messageChat.text,
                 style: TextStyle(color: Colors.white),
               ),
-              padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
-              width: 200,
+              padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+              width: 250,
               decoration: BoxDecoration(
                   color: kPrimaryColor, borderRadius: BorderRadius.circular(8)),
               margin: EdgeInsets.only(
@@ -186,8 +186,8 @@ class ChatPageState extends State<ChatPage> {
                       messageChat.text,
                       style: TextStyle(color: Colors.white),
                     ),
-                    padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
-                    width: 200,
+                    padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                    width: 250,
                     decoration: BoxDecoration(
                         color: kSecondaryColor,
                         borderRadius: BorderRadius.circular(8)),

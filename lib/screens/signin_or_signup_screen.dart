@@ -2,7 +2,7 @@ import 'package:chat_sap/components/loading_view.dart';
 import 'package:chat_sap/constants/constants.dart';
 import 'package:chat_sap/providers/providers.dart';
 import 'package:chat_sap/providers/auth_provider.dart';
-import 'package:chat_sap/screens/messages/home_page.dart';
+import 'package:chat_sap/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
