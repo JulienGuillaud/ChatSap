@@ -12,21 +12,15 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
-  debugPrint('------------- MAIN 1 :');
   WidgetsFlutterBinding.ensureInitialized();
-  debugPrint('------------- MAIN 2 :');
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  debugPrint('------------- MAIN 3 :');
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  debugPrint('------------- MAIN 4 :');
   runApp(MyApp(prefs: prefs));
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  // TEST YANO
   final SharedPreferences prefs;
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   final FirebaseStorage firebaseStorage = FirebaseStorage.instance;
@@ -35,8 +29,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('-------------MyApp build');
-
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<AuthProvider>(
@@ -75,16 +67,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//       ],
-
-//       child: MaterialApp(
-//       title: 'ChatSap',
-//       debugShowCheckedModeBanner: false,
-//       theme: lightThemeData(context),
-//       darkTheme: darkThemeData(context),
-//       // home: WelcomeScreen(),
-//       initialRoute: '/',
-//       routes: kRoutes,
-//     );
-//   }
-// }
