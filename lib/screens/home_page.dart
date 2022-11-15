@@ -415,7 +415,7 @@ class HomePageState extends State<HomePage> {
                         ),
                         Container(
                           child: Text(
-                            'A propos de moi: ${contact.aboutMe}',
+                            contact.aboutMe,
                             maxLines: 1,
                             style: TextStyle(
                                 color: Color.fromARGB(255, 115, 115, 115)),
