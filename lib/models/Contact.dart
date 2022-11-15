@@ -44,18 +44,3 @@ class Contact {
     );
   }
 }
-
-// List contactData = [
-//   Contact(
-//     id: "1",
-//     username: "FouDuGO",
-//     aboutMe: "GO",
-//     photoUrl: "assets/images/user.png",
-//   ),
-//   Contact(
-//     id: "2",
-//     username: "julien",
-//     aboutMe: "G",
-//     photoUrl: "assets/images/user_2.png",
-//   ),
-// ];
