@@ -1,5 +1,6 @@
-import 'package:chat_sap/constants/firestore_constants.dart';
+import 'package:chat_sap/utils/utilities.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 
 class HomeProvider {
   final FirebaseFirestore firebaseFirestore;
@@ -17,10 +18,13 @@ class HomeProvider {
   Stream<QuerySnapshot> getStreamFireStore(
       String pathCollection, int limit, String? textSearch) {
     if (textSearch?.isNotEmpty == true) {
+      textSearch = removeDiacritics(textSearch);
       return firebaseFirestore
           .collection(pathCollection)
-          .limit(limit)
-          .where(FirestoreConstants.username, isEqualTo: textSearch)
+          .orderBy('searchName')
+          .startAt([textSearch])
+          .endAt([textSearch+'\uf8ff'])
+          // .where(FirestoreConstants.username, isEqualTo: textSearch)
           .snapshots();
     } else {
       return firebaseFirestore

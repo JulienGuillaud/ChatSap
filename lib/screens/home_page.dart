@@ -288,7 +288,7 @@ class HomePageState extends State<HomePage> {
                 });
               },
               decoration: InputDecoration.collapsed(
-                hintText: 'Rechercher un utilisateur (nom exact)',
+                hintText: 'Rechercher un utilisateur',
                 hintStyle: TextStyle(fontSize: 13, color: kSecondaryColor),
               ),
               style: TextStyle(fontSize: 13),

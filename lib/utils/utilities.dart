@@ -12,3 +12,19 @@ class Utilities {
     }
   }
 }
+
+String removeDiacritics(String? str) {
+  if(str == null){
+    return "";
+  }else{
+    var withDia = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+    var withoutDia = 'AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+
+    for (int i = 0; i < withDia.length; i++) {
+      str = str!.replaceAll(withDia[i], withoutDia[i]);
+    }
+    str = str!.replaceAll(RegExp(r"\s+"), "");
+    str = str.toLowerCase();
+    return str;
+  }
+}

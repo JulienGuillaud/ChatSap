@@ -1,5 +1,6 @@
 import 'package:chat_sap/constants/firestore_constants.dart';
 import 'package:chat_sap/models/Contact.dart';
+import 'package:chat_sap/utils/utilities.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -76,6 +77,7 @@ class AuthProvider extends ChangeNotifier {
             FirestoreConstants.username: firebaseUser.displayName,
             FirestoreConstants.photoUrl: firebaseUser.photoURL,
             FirestoreConstants.id: firebaseUser.uid,
+            FirestoreConstants.searchName: removeDiacritics(firebaseUser.displayName),
             'createdAt': DateTime.now().millisecondsSinceEpoch.toString(),
             FirestoreConstants.chattingWith: null
           });
@@ -87,6 +89,8 @@ class AuthProvider extends ChangeNotifier {
               FirestoreConstants.username, currentUser.displayName ?? "");
           await prefs.setString(
               FirestoreConstants.photoUrl, currentUser.photoURL ?? "");
+          await prefs.setString(
+              FirestoreConstants.searchName, removeDiacritics(currentUser.displayName));
         } else {
           // Already sign up, just get data from firestore
           DocumentSnapshot documentSnapshot = documents[0];
@@ -96,6 +100,7 @@ class AuthProvider extends ChangeNotifier {
           await prefs.setString(FirestoreConstants.username, contact.username);
           await prefs.setString(FirestoreConstants.photoUrl, contact.photoUrl);
           await prefs.setString(FirestoreConstants.aboutMe, contact.aboutMe);
+          await prefs.setString(FirestoreConstants.searchName, contact.searchName);
         }
         _status = Status.authenticated;
         notifyListeners();
