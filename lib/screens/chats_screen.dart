@@ -263,11 +263,12 @@ class ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('------------- peerNickname : '+widget.arguments.peerNickname);
     return Scaffold(
       appBar: AppBar(
         title: Text(
           this.widget.arguments.peerNickname,
-          style: TextStyle(color: kPrimaryColor),
+          style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
       ),
