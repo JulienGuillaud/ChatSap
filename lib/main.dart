@@ -12,15 +12,11 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
-  debugPrint('------------- MAIN 1 :');
   WidgetsFlutterBinding.ensureInitialized();
-  debugPrint('------------- MAIN 2 :');
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  debugPrint('------------- MAIN 3 :');
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  debugPrint('------------- MAIN 4 :');
   runApp(MyApp(prefs: prefs));
 }
 
@@ -75,16 +71,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//       ],
-
-//       child: MaterialApp(
-//       title: 'ChatSap',
-//       debugShowCheckedModeBanner: false,
-//       theme: lightThemeData(context),
-//       darkTheme: darkThemeData(context),
-//       // home: WelcomeScreen(),
-//       initialRoute: '/',
-//       routes: kRoutes,
-//     );
-//   }
-// }
