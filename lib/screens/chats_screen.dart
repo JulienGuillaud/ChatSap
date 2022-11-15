@@ -4,6 +4,7 @@ import 'package:chat_sap/constants/firestore_constants.dart';
 import 'package:chat_sap/models/ChatMessage.dart';
 import 'package:chat_sap/providers/auth_provider.dart';
 import 'package:chat_sap/providers/chat_provider.dart';
+import 'package:chat_sap/screens/profile_page.dart';
 import 'package:chat_sap/screens/signin_or_signup_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -266,11 +267,30 @@ class ChatPageState extends State<ChatPage> {
     debugPrint('------------- peerNickname : '+widget.arguments.peerNickname);
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          this.widget.arguments.peerNickname,
-          style: TextStyle(color: Colors.white),
+        // Add onlick event on title to navigate to profile page
+        title: GestureDetector(
+          child: Text(
+            widget.arguments.peerNickname,
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProfilePage(
+                  userId: widget.arguments.peerId,
+                ),
+              ),
+            );
+          },
         ),
-        centerTitle: true,
+        centerTitle: false,
+
+        // title: Text(
+        //   this.widget.arguments.peerNickname,
+        //   style: TextStyle(color: Colors.white),
+        // ),
+        // centerTitle: false,
       ),
       body: SafeArea(
         child: WillPopScope(

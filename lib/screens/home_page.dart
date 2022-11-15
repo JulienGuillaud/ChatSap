@@ -200,7 +200,7 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           "Messages",
-          style: TextStyle(color: kPrimaryColor),
+          style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
         actions: <Widget>[buildPopupMenu()],

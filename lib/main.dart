@@ -1,3 +1,4 @@
+import 'package:chat_sap/providers/profile_provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -59,6 +60,11 @@ class MyApp extends StatelessWidget {
             firebaseStorage: this.firebaseStorage,
           ),
         ),
+        Provider<ProfileProvider>(
+            create: (_) => ProfileProvider(
+                prefs: prefs,
+                firebaseFirestore: firebaseFirestore,
+                firebaseStorage: firebaseStorage))
       ],
       child: MaterialApp(
           title: "ChatSap",
