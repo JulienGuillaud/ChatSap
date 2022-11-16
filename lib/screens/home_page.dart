@@ -200,7 +200,7 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           "Messages",
-          style: TextStyle(color: kPrimaryColor),
+          style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
         actions: <Widget>[buildPopupMenu()],
@@ -288,7 +288,7 @@ class HomePageState extends State<HomePage> {
                 });
               },
               decoration: InputDecoration.collapsed(
-                hintText: 'Rechercher un utilisateur (nom exact)',
+                hintText: 'Rechercher un utilisateur',
                 hintStyle: TextStyle(fontSize: 13, color: kSecondaryColor),
               ),
               style: TextStyle(fontSize: 13),
@@ -415,7 +415,7 @@ class HomePageState extends State<HomePage> {
                         ),
                         Container(
                           child: Text(
-                            'A propos de moi: ${contact.aboutMe}',
+                            contact.aboutMe,
                             maxLines: 1,
                             style: TextStyle(
                                 color: Color.fromARGB(255, 115, 115, 115)),

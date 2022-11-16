@@ -1,8 +1,9 @@
-import 'package:chat_sap/providers/providers.dart';
-import 'package:chat_sap/screens/messages/home_page.dart';
-import 'package:chat_sap/screens/signin_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:chat_sap/providers/providers.dart';
+
+import 'home_page.dart';
+import 'signin_or_signup_screen.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({Key? key}) : super(key: key);
